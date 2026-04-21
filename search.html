@@ -10,7 +10,6 @@
 </form>
 
 <p id="result"></p>
-
 <script>
 function searchBook(e){
     e.preventDefault();
@@ -18,9 +17,11 @@ function searchBook(e){
     let book = document.getElementById("book").value;
 
     if(book === ""){
-        document.getElementById("result").innerHTML = "Please enter a book name!";
+        document.getElementById("result").innerHTML = "Enter book name!";
     } else {
-        document.getElementById("result").innerHTML = "Book found: " + book;
+        document.getElementById("result").innerHTML = `
+            <input type="radio"> ${book} - Author A
+        `;
     }
 }
 </script>
