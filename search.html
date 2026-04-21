@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Search Book</h2>
+
+<form onsubmit="searchBook(event)">
+    Book Name: <input type="text" id="book"><br><br>
+    <button type="submit">Search</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function searchBook(e){
+    e.preventDefault();
+
+    let book = document.getElementById("book").value;
+
+    if(book === ""){
+        document.getElementById("result").innerHTML = "Please enter a book name!";
+    } else {
+        document.getElementById("result").innerHTML = "Book found: " + book;
+    }
+}
+</script>
+
+</body>
+</html>
