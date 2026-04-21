@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Issue Book</h2>
+
+<form onsubmit="issueBook(event)">
+    Book Name: <input type="text" id="book" required><br><br>
+    Author: <input type="text" value="Auto-filled" readonly><br><br>
+
+    Issue Date: <input type="date" id="issue" required><br><br>
+    Return Date: <input type="date" id="return"><br><br>
+
+    <button type="submit">Issue</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function issueBook(e){
+    e.preventDefault();
+    document.getElementById("msg").innerHTML = "Book Issued Successfully!";
+}
+</script>
+
+</body>
+</html>
