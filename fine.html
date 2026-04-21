@@ -18,6 +18,15 @@
 <script>
 function payFine(e){
     e.preventDefault();
+
+    let fine = 10; // example fine
+    let paid = document.getElementById("paid").checked;
+
+    if(fine > 0 && !paid){
+        document.getElementById("msg").innerHTML = "Please pay fine!";
+        return;
+    }
+
     document.getElementById("msg").innerHTML = "Transaction Completed!";
 }
 </script>
