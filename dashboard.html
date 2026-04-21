@@ -6,7 +6,17 @@
 
 <a href="search.html">Search Book</a><br><br>
 <a href="issue.html">Issue Book</a><br><br>
-<a href="return.html">Return Book</a>
+<a href="return.html">Return Book</a><br><br>
+
+<a href="addbook.html" id="maintenance">Maintenance (Add Book)</a>
+
+<script>
+let role = localStorage.getItem("role");
+
+if(role !== "admin"){
+    document.getElementById("maintenance").style.display = "none";
+}
+</script>
 
 </body>
 </html>
