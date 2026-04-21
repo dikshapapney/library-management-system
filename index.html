@@ -24,8 +24,14 @@ function login(event){
     let p = document.getElementById("pass").value;
 
     if(u === "admin" && p === "admin123"){
+        localStorage.setItem("role", "admin");
         window.location.href = "dashboard.html";
-    } else {
+    }
+    else if(u === "user" && p === "user123"){
+        localStorage.setItem("role", "user");
+        window.location.href = "dashboard.html";
+    }
+    else{
         document.getElementById("msg").innerHTML = "Invalid login!";
     }
 }
