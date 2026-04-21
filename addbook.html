@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Add Book</h2>
+
+<form onsubmit="addBook(event)">
+    Type:
+    <input type="radio" name="type" value="book" checked> Book
+    <input type="radio" name="type" value="movie"> Movie
+    <br><br>
+
+    Book Name: <input type="text" id="name"><br><br>
+    Author: <input type="text" id="author"><br><br>
+
+    <button type="submit">Add</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function addBook(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let author = document.getElementById("author").value;
+
+    if(name === "" || author === ""){
+        document.getElementById("msg").innerHTML = "All fields required!";
+    } else {
+        document.getElementById("msg").innerHTML = "Book Added!";
+    }
+}
+</script>
+
+</body>
+</html>
