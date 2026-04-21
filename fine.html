@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fine Payment</h2>
+
+<p>Fine Amount: 0</p>
+
+<form onsubmit="payFine(event)">
+    Paid: <input type="checkbox" id="paid"><br><br>
+    Remarks: <input type="text"><br><br>
+
+    <button type="submit">Confirm</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function payFine(e){
+    e.preventDefault();
+    document.getElementById("msg").innerHTML = "Transaction Completed!";
+}
+</script>
+
+</body>
+</html>
