@@ -16,6 +16,14 @@
 <script>
 function returnBook(e){
     e.preventDefault();
+
+    let serial = document.getElementById("serial").value;
+
+    if(serial === ""){
+        document.getElementById("msg").innerHTML = "Serial No required!";
+        return;
+    }
+
     window.location.href = "fine.html";
 }
 </script>
