@@ -15,11 +15,25 @@
 </form>
 
 <p id="msg"></p>
-
 <script>
 function issueBook(e){
     e.preventDefault();
-    document.getElementById("msg").innerHTML = "Book Issued Successfully!";
+
+    let issue = new Date(document.getElementById("issue").value);
+    let today = new Date();
+
+    if(issue < today){
+        document.getElementById("msg").innerHTML = "Issue date cannot be past!";
+        return;
+    }
+
+    let returnDate = new Date(issue);
+    returnDate.setDate(returnDate.getDate() + 15);
+
+    document.getElementById("msg").innerHTML = 
+        "Book Issued! Return before: " + returnDate.toDateString();
+
+    localStorage.setItem("returnDate", returnDate);
 }
 </script>
 
